@@ -1,5 +1,6 @@
 import React from "react";
 import "../View/Product.css";
+import PropTypes from "prop-types";
 import { useStateValue } from "../Model/StateProvider";
 
 function Product({ id, title, image, price, rating, description }) {
@@ -46,5 +47,13 @@ function Product({ id, title, image, price, rating, description }) {
     </div>
   );
 }
-
+Product.propTypes = {
+  id: PropTypes.string,
+  title: PropTypes.string,
+  image: PropTypes.string,
+  price: PropTypes.number,
+  rating: PropTypes.number,
+  description: PropTypes.string,
+  hideButton: PropTypes.bool,
+};
 export default Product;

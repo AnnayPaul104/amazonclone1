@@ -1,5 +1,6 @@
 import React from "react";
 import "../View/CheckoutProduct.css";
+import PropTypes from "prop-types";
 import { useStateValue } from "../Model/StateProvider";
 
 function CheckoutProduct({
@@ -45,5 +46,13 @@ function CheckoutProduct({
     </div>
   );
 }
-
+CheckoutProduct.propTypes = {
+  id: PropTypes.string,
+  title: PropTypes.string,
+  image: PropTypes.string,
+  price: PropTypes.number,
+  rating: PropTypes.number,
+  description: PropTypes.string,
+  hideButton: PropTypes.bool,
+};
 export default CheckoutProduct;
