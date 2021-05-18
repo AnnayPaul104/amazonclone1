@@ -8,7 +8,6 @@ export const getCartTotal = (cart) =>
   cart.reduce((amount, item) => item.price + amount, 0);
 
 const reducer = (state, action) => {
-  console.log(action); // For checking if the function is working properly or not!
   switch (action.type) {
     case "ADD_TO_CART":
       return {
