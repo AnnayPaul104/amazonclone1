@@ -57,7 +57,9 @@ describe("Reducer", () => {
       item: item,
     });
     state = newState;
-    expect(newState).toStrictEqual(expectedState);
+    it("Should return a new state based on the action type", () => {
+      expect(newState).toStrictEqual(expectedState);
+    });
   });
 
   describe("ACTION: Dropping items from the cart", () => {
@@ -77,7 +79,9 @@ describe("Reducer", () => {
       type: "REMOVE_FROM_CART",
       id: item.id,
     });
-    expect(newState).toStrictEqual(expectedState);
+    it("Should return a new state based on the action type", () => {
+      expect(newState).toStrictEqual(expectedState);
+    });
   });
 
   describe("ACTION: Making the cart empty", () => {
@@ -98,7 +102,9 @@ describe("Reducer", () => {
       item: item,
     });
     state = newState;
-    expect(newState).toStrictEqual(expectedState);
+    it("Should return a new state based on the action type", () => {
+      expect(newState).toStrictEqual(expectedState);
+    });
   });
 
   describe("ACTION: Setting up the user", () => {
@@ -115,6 +121,8 @@ describe("Reducer", () => {
       type: "SET_USER",
       user: user,
     });
-    expect(newState).toStrictEqual(expectedState);
+    it("Should return a new state based on the action type", () => {
+      expect(newState).toStrictEqual(expectedState);
+    });
   });
 });
